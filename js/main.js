@@ -169,7 +169,7 @@ const cityMenu = event => {
     conButton.classList.add('button-active');
     conButtonImg.classList.remove('button-img-unactive');
     conButtonImg.classList.add('button-img-active');
-    conButton.innerHTML = 'City<img src="img/accactive.png" class="button-img-unactive">';
+    conButton.innerHTML = 'City<img src="img/accactive.pngg" class="button-img-unactive">';
   } else {
     cityUl.classList.remove('city-ul');
     cityUl.classList.add('city-ul-none');
