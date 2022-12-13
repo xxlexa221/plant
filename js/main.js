@@ -169,7 +169,7 @@ const cityMenu = event => {
     conButton.classList.add('button-active');
     conButtonImg.classList.remove('button-img-unactive');
     conButtonImg.classList.add('button-img-active');
-    conButton.innerHTML = 'City<img src="img/accactive.png" class="button-img-unactive">';
+    conButton.innerHTML = 'City<img src="img/accactive.pngg" class="button-img-unactive">';
   } else {
     cityUl.classList.remove('city-ul');
     cityUl.classList.add('city-ul-none');
@@ -208,14 +208,32 @@ procare.addEventListener('click', () => {
 basics.addEventListener('click', () => {
   basics.classList.toggle('active');
   basics.classList.toggle('unactive');
+  standart.classList.remove('active');
+  standart.classList.add('unactive');
+  standartprice.classList.add('hidden');
+  procare.classList.remove('active');
+  procare.classList.add('unactive');
+  procareprice.classList.add('hidden');
 });
 standart.addEventListener('click', () => {
   standart.classList.toggle('active');
   standart.classList.toggle('unactive');
+  basics.classList.remove('active');
+  basics.classList.add('unactive');
+  basicsprice.classList.add('hidden');
+  procare.classList.remove('active');
+  procare.classList.add('unactive');
+  procareprice.classList.add('hidden');
 });
 procare.addEventListener('click', () => {
   procare.classList.toggle('active');
   procare.classList.toggle('unactive');
+  standart.classList.remove('active');
+  standart.classList.add('unactive');
+  standartprice.classList.add('hidden');
+  basics.classList.remove('active');
+  basics.classList.add('unactive');
+  basicsprice.classList.add('hidden');
 });
 
 /***/ }),
