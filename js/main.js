@@ -299,13 +299,13 @@ pricebtn.addEventListener('click', () => {
     });
   } else if (body.scrollHeight > '7000') {
     window.scroll({
-      top: 6191,
+      top: 6163,
       left: 0,
       behavior: 'smooth'
     });
   } else {
     window.scroll({
-      top: 5525,
+      top: 5491,
       left: 0,
       behavior: 'smooth'
     });
