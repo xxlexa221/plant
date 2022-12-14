@@ -13,7 +13,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_contactcity_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_contactcity_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_prices_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/prices.js */ "./src/js/components/prices.js");
 /* harmony import */ var _components_prices_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_prices_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/service.js */ "./src/js/components/service.js");
+/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_service_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contactadress.js */ "./src/js/components/contactadress.js");
+/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_contactadress_js__WEBPACK_IMPORTED_MODULE_3__);
 console.log('components');
+
+
 
 
 
@@ -152,6 +158,72 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/contactadress.js":
+/*!********************************************!*\
+  !*** ./src/js/components/contactadress.js ***!
+  \********************************************/
+/***/ (() => {
+
+const canada = document.querySelector('.canandaigua');
+const ny = document.querySelector('.new-york');
+const yonk = document.querySelector('.yonkers');
+const sherr = document.querySelector('.sherrill');
+const contactCanada = document.querySelector('.contact-adress-canandaigua');
+const contactNy = document.querySelector('.contact-adress-new-york');
+const contactYonk = document.querySelector('.contact-adress-yonkers');
+const contactSherr = document.querySelector('.contact-adress-sherrill');
+const conButton = document.querySelector('.col3');
+canada.addEventListener('click', () => {
+  if (contactCanada.classList.contains('hidden')) {
+    contactCanada.classList.remove('hidden');
+    conButton.click();
+    contactNy.classList.add('hidden');
+    contactYonk.classList.add('hidden');
+    contactSherr.classList.add('hidden');
+  } else {
+    contactCanada.classList.add('hidden');
+    conButton.click();
+  }
+});
+ny.addEventListener('click', () => {
+  if (contactNy.classList.contains('hidden')) {
+    contactNy.classList.remove('hidden');
+    conButton.click();
+    contactCanada.classList.add('hidden');
+    contactYonk.classList.add('hidden');
+    contactSherr.classList.add('hidden');
+  } else {
+    contactNy.classList.add('hidden');
+    conButton.click();
+  }
+});
+yonk.addEventListener('click', () => {
+  if (contactYonk.classList.contains('hidden')) {
+    contactYonk.classList.remove('hidden');
+    conButton.click();
+    contactCanada.classList.add('hidden');
+    contactNy.classList.add('hidden');
+    contactSherr.classList.add('hidden');
+  } else {
+    contactYonk.classList.add('hidden');
+    conButton.click();
+  }
+});
+sherr.addEventListener('click', () => {
+  if (contactSherr.classList.contains('hidden')) {
+    contactSherr.classList.remove('hidden');
+    conButton.click();
+    contactCanada.classList.add('hidden');
+    contactYonk.classList.add('hidden');
+    contactNy.classList.add('hidden');
+  } else {
+    contactSherr.classList.add('hidden');
+    conButton.click();
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/contactcity.js":
 /*!******************************************!*\
   !*** ./src/js/components/contactcity.js ***!
@@ -234,6 +306,57 @@ procare.addEventListener('click', () => {
   basics.classList.remove('active');
   basics.classList.add('unactive');
   basicsprice.classList.add('hidden');
+});
+
+/***/ }),
+
+/***/ "./src/js/components/service.js":
+/*!**************************************!*\
+  !*** ./src/js/components/service.js ***!
+  \**************************************/
+/***/ (() => {
+
+const gardenbtn = document.querySelector('.garden-btn');
+const lawnbtn = document.querySelector('.lawn-btn');
+const plantingbtn = document.querySelector('.planting-btn');
+const garden = document.querySelectorAll('.garden');
+const lawn = document.querySelectorAll('.lawn');
+const planting = document.querySelectorAll('.planting');
+gardenbtn.addEventListener('click', () => {
+  gardenbtn.classList.toggle('bgcolor');
+  for (const item of lawn) {
+    item.classList.toggle('blur');
+  }
+  for (const item of planting) {
+    item.classList.toggle('blur');
+  }
+  for (const item of garden) {
+    item.classList.toggle('shadow');
+  }
+});
+lawnbtn.addEventListener('click', () => {
+  lawnbtn.classList.toggle('bgcolor');
+  for (const item of garden) {
+    item.classList.toggle('blur');
+  }
+  for (const item of planting) {
+    item.classList.toggle('blur');
+  }
+  for (const item of lawn) {
+    item.classList.toggle('shadow');
+  }
+});
+plantingbtn.addEventListener('click', () => {
+  plantingbtn.classList.toggle('bgcolor');
+  for (const item of lawn) {
+    item.classList.toggle('blur');
+  }
+  for (const item of garden) {
+    item.classList.toggle('blur');
+  }
+  for (const item of planting) {
+    item.classList.toggle('shadow');
+  }
 });
 
 /***/ }),
