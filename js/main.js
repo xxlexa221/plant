@@ -13,11 +13,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_contactcity_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_contactcity_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_prices_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/prices.js */ "./src/js/components/prices.js");
 /* harmony import */ var _components_prices_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_prices_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/service.js */ "./src/js/components/service.js");
-/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_service_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contactadress.js */ "./src/js/components/contactadress.js");
-/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_contactadress_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_learnmore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/learnmore.js */ "./src/js/components/learnmore.js");
+/* harmony import */ var _components_learnmore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_learnmore_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/service.js */ "./src/js/components/service.js");
+/* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_service_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/contactadress.js */ "./src/js/components/contactadress.js");
+/* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__);
 console.log('components');
+
 
 
 
@@ -253,6 +256,62 @@ const cityMenu = event => {
   }
 };
 conButton.addEventListener('click', cityMenu);
+
+/***/ }),
+
+/***/ "./src/js/components/learnmore.js":
+/*!****************************************!*\
+  !*** ./src/js/components/learnmore.js ***!
+  \****************************************/
+/***/ (() => {
+
+// 689
+const learnbtn = document.querySelector('.read-btn');
+const pricebtn = document.querySelector('.btn-prices');
+const body = document.querySelector('.page__body');
+learnbtn.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    window.scroll({
+      top: 689,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    window.scroll({
+      top: 859,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 775,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+});
+pricebtn.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    window.scroll({
+      top: 3262,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    window.scroll({
+      top: 6191,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 5525,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+});
+console.log(pageYOffset);
 
 /***/ }),
 
