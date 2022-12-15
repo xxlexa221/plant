@@ -19,6 +19,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_service_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/contactadress.js */ "./src/js/components/contactadress.js");
 /* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_headernav_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/headernav.js */ "./src/js/components/headernav.js");
+/* harmony import */ var _components_headernav_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_headernav_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_upward_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/upward.js */ "./src/js/components/upward.js");
+/* harmony import */ var _components_upward_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_upward_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
 
 
 
@@ -233,8 +239,8 @@ yonk.addEventListener('click', () => {
     contactSherr.classList.add('hidden');
     contactYonk.animate(heightAdress, TimingAdress);
   } else {
-    contactYonk.classList.remove('hidden');
-    sherr.classList.yonk('color-gray');
+    contactYonk.classList.add('hidden');
+    sherr.classList.remove('color-gray');
     conButton.click();
   }
 });
@@ -301,6 +307,139 @@ conButton.addEventListener('click', cityMenu);
 
 /***/ }),
 
+/***/ "./src/js/components/headernav.js":
+/*!****************************************!*\
+  !*** ./src/js/components/headernav.js ***!
+  \****************************************/
+/***/ (() => {
+
+const service = document.querySelector('.service-scroll');
+const contacts = document.querySelector('.contacts-scroll');
+const price = document.querySelector('.price-scroll');
+const about = document.querySelector('.about-us');
+const body = document.querySelector('.page__body');
+about.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    window.scroll({
+      top: 688,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '6800' && body.scrollHeight < '7000') {
+    window.scroll({
+      top: 776,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    window.scroll({
+      top: 888,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 779,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+});
+service.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    //pc
+    window.scroll({
+      top: 1376,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '6800' && body.scrollHeight < '7000') {
+    //phone
+    window.scroll({
+      top: 1640,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    //mini-phone
+    window.scroll({
+      top: 1886,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 1652,
+      left: 0,
+      behavior: 'smooth'
+    }); //tablet
+  }
+});
+
+price.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    //pc
+    window.scroll({
+      top: 2678,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '6800' && body.scrollHeight < '7000') {
+    //phone
+    window.scroll({
+      top: 5100,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    //mini-phone
+    window.scroll({
+      top: 5330,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 4952,
+      left: 0,
+      behavior: 'smooth'
+    }); //tablet
+  }
+});
+
+contacts.addEventListener('click', () => {
+  if (body.scrollHeight < '4000') {
+    //pc
+    window.scroll({
+      top: 3262,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '6800' && body.scrollHeight < '7000') {
+    //phone
+    window.scroll({
+      top: 6005,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '7000') {
+    //mini-phone
+    window.scroll({
+      top: 6234,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    window.scroll({
+      top: 5525,
+      left: 0,
+      behavior: 'smooth'
+    }); //tablet
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/learnmore.js":
 /*!****************************************!*\
   !*** ./src/js/components/learnmore.js ***!
@@ -324,9 +463,15 @@ learnbtn.addEventListener('click', () => {
       left: 0,
       behavior: 'smooth'
     });
+  } else if (body.scrollHeight > '6800') {
+    window.scroll({
+      top: 776,
+      left: 0,
+      behavior: 'smooth'
+    });
   } else {
     window.scroll({
-      top: 775,
+      top: 665,
       left: 0,
       behavior: 'smooth'
     });
@@ -341,24 +486,25 @@ pricebtn.addEventListener('click', () => {
     });
   } else if (body.scrollHeight > '7000') {
     window.scroll({
-      top: 6191,
+      top: 6161,
       left: 0,
       behavior: 'smooth'
     });
   } else if (body.scrollHeight > '6800') {
     window.scroll({
-      top: 5970,
+      top: 5934,
       left: 0,
       behavior: 'smooth'
     });
   } else {
     window.scroll({
-      top: 5525,
+      top: 5436,
       left: 0,
       behavior: 'smooth'
     });
   }
 });
+console.log(pageYOffset);
 
 /***/ }),
 
@@ -550,6 +696,25 @@ plantingbtn.addEventListener('click', () => {
   for (const item of planting) {
     item.classList.toggle('shadow');
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/upward.js":
+/*!*************************************!*\
+  !*** ./src/js/components/upward.js ***!
+  \*************************************/
+/***/ (() => {
+
+const scroll = document.querySelector('.upward');
+window.addEventListener('scroll', () => {
+  scroll.classList.toggle('active', window.scrollY > 500);
+});
+scroll.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 /***/ }),
