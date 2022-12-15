@@ -358,6 +358,12 @@ body {
   line-height: 50px;
   color: #010201;
 }
+.nav-li:not(:first-child) {
+  cursor: pointer;
+}
+.nav-li:first-child {
+  cursor: default;
+}
 .nav-li:not(:last-child) {
   margin-right: 44px;
 }
