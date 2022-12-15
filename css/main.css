@@ -251,13 +251,40 @@ body {
   border-radius: 0 0 20px 20px;
   border: 1px solid rgba(70, 70, 70, 0.3);
   border-top: 0;
+  overflow: hidden;
 }
 
+/*@keyframes open {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 115px;
+    }
+  }
+
+  @keyframes text-p {
+    0% {
+
+      border-color:#D6E7D2;
+    }
+    100% {
+
+      border-color: #AEA1A1;
+    }
+}*/
 .pos p {
   font-weight: 300;
   font-size: 10px;
   line-height: 10px;
   color: #717171;
+  -webkit-animation-name: text-p;
+  animation-name: text-p;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  border-top: 0.5px solid #AEA1A1;
+  padding-top: 10px;
+  margin: 0;
 }
 
 .active {
@@ -304,12 +331,6 @@ body {
 .pro-care {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.pos p {
-  border-top: 0.5px solid #AEA1A1;
-  padding-top: 10px;
-  margin: 0;
 }
 
 .button-price {
@@ -1014,6 +1035,7 @@ body {
   -webkit-box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
   z-index: 100;
+  overflow: hidden;
 }
 @media (max-width: 650px) {
   .city-ul {
@@ -1194,9 +1216,7 @@ body {
   padding-top: 15px;
   font-weight: 700;
   font-size: 20px;
-  -webkit-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  border: 1px solid rgba(70, 70, 70, 0.3);
 }
 .unactive:hover {
   background-color: #D6E7D2;
@@ -1236,9 +1256,6 @@ body {
   border-radius: 5px;
   font-family: "Inika";
   padding: 12px 32px;
-  -webkit-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
 }
 .btn-prices:hover {
   background-color: #E06733;
@@ -1294,6 +1311,7 @@ body {
   margin-top: 120px;
   z-index: 10;
   padding: 18px 36px 32px 40px;
+  overflow: hidden;
 }
 @media (max-width: 650px) {
   .contact-adress {
@@ -1375,6 +1393,15 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.city-list:hover {
+  color: gray;
+}
+
+.color-gray {
+  color: black;
+  border-color: #fa0000;
 }
 
 .footer {

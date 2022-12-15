@@ -19,7 +19,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_service_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/contactadress.js */ "./src/js/components/contactadress.js");
 /* harmony import */ var _components_contactadress_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_contactadress_js__WEBPACK_IMPORTED_MODULE_4__);
-console.log('components');
 
 
 
@@ -176,50 +175,83 @@ const contactNy = document.querySelector('.contact-adress-new-york');
 const contactYonk = document.querySelector('.contact-adress-yonkers');
 const contactSherr = document.querySelector('.contact-adress-sherrill');
 const conButton = document.querySelector('.col3');
+const heightAdress = [{
+  height: '0px'
+}, {
+  height: '215px'
+}];
+const TimingAdress = {
+  duration: 400,
+  iterations: 1
+};
 canada.addEventListener('click', () => {
   if (contactCanada.classList.contains('hidden')) {
     contactCanada.classList.remove('hidden');
+    sherr.classList.remove('color-gray');
+    yonk.classList.remove('color-gray');
+    ny.classList.remove('color-gray');
+    canada.classList.add('color-gray');
     conButton.click();
     contactNy.classList.add('hidden');
     contactYonk.classList.add('hidden');
     contactSherr.classList.add('hidden');
+    contactCanada.animate(heightAdress, TimingAdress);
   } else {
     contactCanada.classList.add('hidden');
+    canada.classList.remove('color-gray');
     conButton.click();
   }
 });
 ny.addEventListener('click', () => {
   if (contactNy.classList.contains('hidden')) {
     contactNy.classList.remove('hidden');
+    sherr.classList.remove('color-gray');
+    yonk.classList.remove('color-gray');
+    ny.classList.add('color-gray');
+    canada.classList.remove('color-gray');
     conButton.click();
     contactCanada.classList.add('hidden');
     contactYonk.classList.add('hidden');
     contactSherr.classList.add('hidden');
+    contactNy.animate(heightAdress, TimingAdress);
   } else {
     contactNy.classList.add('hidden');
+    ny.classList.remove('color-gray');
     conButton.click();
   }
 });
 yonk.addEventListener('click', () => {
   if (contactYonk.classList.contains('hidden')) {
     contactYonk.classList.remove('hidden');
+    sherr.classList.remove('color-gray');
+    yonk.classList.add('color-gray');
+    ny.classList.remove('color-gray');
+    canada.classList.remove('color-gray');
     conButton.click();
     contactCanada.classList.add('hidden');
     contactNy.classList.add('hidden');
     contactSherr.classList.add('hidden');
+    contactYonk.animate(heightAdress, TimingAdress);
   } else {
-    contactYonk.classList.add('hidden');
+    contactYonk.classList.remove('hidden');
+    sherr.classList.yonk('color-gray');
     conButton.click();
   }
 });
 sherr.addEventListener('click', () => {
   if (contactSherr.classList.contains('hidden')) {
     contactSherr.classList.remove('hidden');
+    sherr.classList.add('color-gray');
+    yonk.classList.remove('color-gray');
+    ny.classList.remove('color-gray');
+    canada.classList.remove('color-gray');
     conButton.click();
     contactCanada.classList.add('hidden');
     contactYonk.classList.add('hidden');
     contactNy.classList.add('hidden');
+    contactSherr.animate(heightAdress, TimingAdress);
   } else {
+    sherr.classList.remove('color-gray');
     contactSherr.classList.add('hidden');
     conButton.click();
   }
@@ -236,6 +268,15 @@ sherr.addEventListener('click', () => {
 const conButton = document.querySelector('.col3');
 const cityUl = document.querySelector('.city-ul-none');
 const conButtonImg = document.querySelector('.button-img-unactive');
+const heightContact = [{
+  height: '0px'
+}, {
+  height: '244px'
+}];
+const Timing = {
+  duration: 500,
+  iterations: 1
+};
 const cityMenu = event => {
   if (cityUl.classList.contains('city-ul-none')) {
     cityUl.classList.add('city-ul');
@@ -245,6 +286,7 @@ const cityMenu = event => {
     conButtonImg.classList.remove('button-img-unactive');
     conButtonImg.classList.add('button-img-active');
     conButton.innerHTML = 'City<img src="img/accactive.png" class="button-img-unactive">';
+    cityUl.animate(heightContact, Timing);
   } else {
     cityUl.classList.remove('city-ul');
     cityUl.classList.add('city-ul-none');
@@ -299,19 +341,24 @@ pricebtn.addEventListener('click', () => {
     });
   } else if (body.scrollHeight > '7000') {
     window.scroll({
-      top: 6163,
+      top: 6191,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if (body.scrollHeight > '6800') {
+    window.scroll({
+      top: 5970,
       left: 0,
       behavior: 'smooth'
     });
   } else {
     window.scroll({
-      top: 5491,
+      top: 5525,
       left: 0,
       behavior: 'smooth'
     });
   }
 });
-console.log(pageYOffset);
 
 /***/ }),
 
@@ -327,14 +374,29 @@ const procare = document.querySelector('.pro-care');
 const basicsprice = document.querySelector('.price-basics');
 const standartprice = document.querySelector('.price-standart');
 const procareprice = document.querySelector('.price-procare');
+const heightBasics = document.querySelector('.price-basics');
+const heightStandart = document.querySelector('.price-standart');
+const heightProcare = document.querySelector('.price-procare');
+const heightPrice = [{
+  height: '0px'
+}, {
+  height: '115px'
+}];
+const Timing = {
+  duration: 500,
+  iterations: 1
+};
 basics.addEventListener('click', () => {
   basicsprice.classList.toggle('hidden');
+  basicsprice.animate(heightPrice, Timing);
 });
 standart.addEventListener('click', () => {
   standartprice.classList.toggle('hidden');
+  standartprice.animate(heightPrice, Timing);
 });
 procare.addEventListener('click', () => {
   procareprice.classList.toggle('hidden');
+  procareprice.animate(heightPrice, Timing);
 });
 basics.addEventListener('click', () => {
   basics.classList.toggle('active');
@@ -382,6 +444,30 @@ const garden = document.querySelectorAll('.garden');
 const lawn = document.querySelectorAll('.lawn');
 const planting = document.querySelectorAll('.planting');
 gardenbtn.addEventListener('click', () => {
+  if (lawnbtn.classList.contains('bgcolor')) {
+    lawnbtn.classList.remove('bgcolor');
+    for (const item of garden) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('blur');
+    }
+    for (const item of lawn) {
+      item.classList.remove('shadow');
+    }
+  }
+  if (plantingbtn.classList.contains('bgcolor')) {
+    plantingbtn.classList.remove('bgcolor');
+    for (const item of lawn) {
+      item.classList.remove('blur');
+    }
+    for (const item of garden) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('shadow');
+    }
+  }
   gardenbtn.classList.toggle('bgcolor');
   for (const item of lawn) {
     item.classList.toggle('blur');
@@ -394,6 +480,30 @@ gardenbtn.addEventListener('click', () => {
   }
 });
 lawnbtn.addEventListener('click', () => {
+  if (gardenbtn.classList.contains('bgcolor')) {
+    gardenbtn.classList.remove('bgcolor');
+    for (const item of lawn) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('blur');
+    }
+    for (const item of garden) {
+      item.classList.remove('shadow');
+    }
+  }
+  if (plantingbtn.classList.contains('bgcolor')) {
+    plantingbtn.classList.remove('bgcolor');
+    for (const item of lawn) {
+      item.classList.remove('blur');
+    }
+    for (const item of garden) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('shadow');
+    }
+  }
   lawnbtn.classList.toggle('bgcolor');
   for (const item of garden) {
     item.classList.toggle('blur');
@@ -406,6 +516,30 @@ lawnbtn.addEventListener('click', () => {
   }
 });
 plantingbtn.addEventListener('click', () => {
+  if (gardenbtn.classList.contains('bgcolor')) {
+    gardenbtn.classList.remove('bgcolor');
+    for (const item of lawn) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('blur');
+    }
+    for (const item of garden) {
+      item.classList.remove('shadow');
+    }
+  }
+  if (lawnbtn.classList.contains('bgcolor')) {
+    lawnbtn.classList.remove('bgcolor');
+    for (const item of garden) {
+      item.classList.remove('blur');
+    }
+    for (const item of planting) {
+      item.classList.remove('blur');
+    }
+    for (const item of lawn) {
+      item.classList.remove('shadow');
+    }
+  }
   plantingbtn.classList.toggle('bgcolor');
   for (const item of lawn) {
     item.classList.toggle('blur');
