@@ -304,6 +304,19 @@ const cityMenu = event => {
   }
 };
 conButton.addEventListener('click', cityMenu);
+const city = document.querySelector('.col4');
+document.addEventListener('click', e => {
+  const click = e.composedPath().includes(conButton) || e.composedPath().includes(city);
+  if (!click) {
+    cityUl.classList.remove('city-ul');
+    cityUl.classList.add('city-ul-none');
+    conButton.classList.add('button-unactive');
+    conButton.classList.remove('button-active');
+    conButtonImg.classList.add('button-img-unactive');
+    conButtonImg.classList.remove('button-img-active');
+    conButton.innerHTML = 'City<img src="img/acc.png" class="button-img-unactive">';
+  }
+});
 
 /***/ }),
 
@@ -523,15 +536,31 @@ const procareprice = document.querySelector('.price-procare');
 const heightBasics = document.querySelector('.price-basics');
 const heightStandart = document.querySelector('.price-standart');
 const heightProcare = document.querySelector('.price-procare');
+const cont = document.querySelector('.lop3');
+const pr = document.querySelector('.pr');
 const heightPrice = [{
   height: '0px'
 }, {
   height: '115px'
 }];
 const Timing = {
-  duration: 500,
+  duration: 200,
   iterations: 1
 };
+document.addEventListener('click', e => {
+  const click = e.composedPath().includes(cont) || e.composedPath().includes(pr);
+  if (!click) {
+    basicsprice.classList.add('hidden');
+    standartprice.classList.add('hidden');
+    procareprice.classList.add('hidden');
+    standart.classList.add('unactive');
+    procare.classList.add('unactive');
+    basics.classList.add('unactive');
+    standart.classList.remove('active');
+    procare.classList.remove('active');
+    basics.classList.remove('active');
+  }
+});
 basics.addEventListener('click', () => {
   basicsprice.classList.toggle('hidden');
   basicsprice.animate(heightPrice, Timing);
