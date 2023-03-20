@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Plants</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>SVET</title>
+  <link rel="preload" href="fonts/ComfortaaRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PTSansRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -15,210 +17,392 @@
 
 <body class="page__body">
   <div class="site-container">
-    <header class="header header-size headerpositon">
-  <div class="container  container__header">
-    <a class="logo"><img src="img/logo.svg" alt="Plants"></a>
-<nav class="nav" data-menu>
-  <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close></button>
-  <ul class="nav-ul list-reset">
-    <li class="nav-li nav-li__home">
-      Home
-    </li>
-    <li class="nav-li about-us" data-menu-item>
-     About us
-    </li>
-    <li class="nav-li service-scroll" data-menu-item>
-      Service
-    </li>
-    <li class="nav-li price-scroll" data-menu-item>
-      Price
-    </li>
-    <li class="nav-li contacts-scroll" data-menu-item>
-      Contacts
-    </li>
-  </ul>
+    <div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
 
-</nav>
-<button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-  <span class="burger__line"></span>
-  <span class="burger__line"></span>
-  <span class="burger__line"></span>
-</button>
-<div class="upward"></div>
+<header class="header">
+  <div class="container header-container">
+  <img loading="lazy" src="img/svg/logo.svg" class="logo" width="120" height="50" alt="logo">
+    <nav class="nav" data-menu>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#company" data-menu-item class="nav__link">О нас</a></li>
+        <li class="nav__item"><a href="#gallery" data-menu-item class="nav__link">Галерея</a></li>
+        <li class="nav__item"><a href="#complects" data-menu-item class="nav__link">Расчитать</a></li>
+        <li class="nav__item"><a href="#comments" data-menu-item class="nav__link">Отзывы</a></li>
+        <li class="nav__item"><a href="#contacts" data-menu-item class="nav__link">Контакты</a></li>
+      </ul>
+      <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close></button>
+    </nav>
+
+  <button  class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
 
     <main class="main">
-      <section class="more">
-  <div class="container">
-    <div class="more-block">
-      <img src="img/leafs.svg" class="lop2" alt="Plants">
-      <div class="read-more">
-      <h1 class="read-more__title lop1">We grow <span>plants</span> and give you oxygen</h1>
-        <p class="read-more__descr lop1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
-        <button class="read-btn btn lop1">Learn more</button>
-      </div>
-    </div>
+      <div class="section"><section class="info">
+  <div class="bgblack"></div>
+  <video autoplay loop preload="auto" muted height="auto" class="bgvideo">
+      <source src="img/video/back.webm" type="video/webm">
+  </video>
+  <div class="container__info">
+
+<h1 class="info__title">SVET</h1>
+<p class="info__descr " data-aos="zoom-in" data-aos-duration="2000">
+  Студия технического обеспечения
+</p>
   </div>
+
 </section>
-
-      <section class="gardeners">
-  <div class="container">
-    <div class="gardener-block">
-      <div class="gardener-more">
-      <h2 class="gardener-more__title"><span>We are </span> professional experienced <span>gardeners </span></h2>
-        <p class="gardener-more__descr">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-      </div>
-      <img src="img/houseplant.svg" alt="houseplant" class="gardener">
-    </div>
-  </div>
-</section>
-
-      <section class="service">
-  <div class="container">
-    <div class="service-descr">
-    <h2 class="service__title">Service and our projects</h2>
-    <div class="service-group-btn">
-    <button class="service-btn btn first-btn garden-btn">Gardens</button>
-    <button class="service-btn btn lawn-btn">Lawn</button>
-    <button class="service-btn btn planting-btn">Planting</button>
-   </div>
-    </div>
-
-    <div class="photo-one-link">
-      <div class="flex-a garden">
-        <img src="img/1.png" alt=""><a class="img-a">Garden care <p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-      <div class="flex-a planting">
-        <img src="img/2.png" alt=""> <a class="img-a">Planting<p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-      <div class="flex-a lawn">
-        <img src="img/3.png" alt=""> <a class="img-a">Lawn care<p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-      <div class="flex-a planting">
-        <img src="img/4.png" alt=""><a class="img-a">Planting<p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-      <div class="flex-a garden">
-        <img src="img/5.png" alt=""><a class="img-a">Garden care<p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-      <div class="flex-a planting">
-        <img src="img/6.png" alt=""><a class="img-a">Planting<p class="img-p">Lorem Ipsum has been the industry</p></a>
-      </div>
-    </div>
-  </div>
 </div>
-</section>
-
-      <section class="prices">
-  <div class="container">
-      <div class="prices-title">
-        <h5 class="one-h5 lop1">Prices</h5>
-        <h5 class="two-h5 lop2">Our best <span>gardeners</span> are ready to help you</h5>
-      </div>
-      <div class="prices-flex">
-      <div class="cat-prices lop3">
-        <a class="basics pr unactive">Basics</a>
-        <div class="price-basics hidden pos">
-          <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-          <h1 class="price-h1"><span class="price-span">$15</span> / per hour</h1>
-          <button class="btn-reset button-price">Order</button>
-        </div>
-        <a class="standart pr unactive">Standart</a>
-        <div class="price-standart hidden pos">
-          <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-          <h1 class="price-h1"><span class="price-span">$25</span> / per hour</h1>
-          <button class="btn-reset button-price">Order</button>
-        </div>
-        <a class="pro-care pr unactive">Pro care</a>
-        <div class="price-procare hidden pos">
-          <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-          <h1 class="price-h1"><span class="price-span">$35</span> / per hour</h1>
-          <button class="btn-reset button-price">Order</button>
-        </div>
-      </div>
-      <div class="listik">
-      <button class="btn-reset btn-prices lop4">Contact us</button>
-      <img src="img/leafsic.svg" alt="leafsic">
+      <section class="company" id="company">
+  <div class="container container__company" data-aos="fade-up" data-aos-duration="1500">
+    <div class="company__info" >
+      <h1 class="company__title">О нас</h1>
+      <p class="company__descr">
+        Студия SVET работает с 2015 года, за это время компания выросла и достигла немалых успехов.
+        Студия успешно совмещает современные технические решения для частных мероприятий с визуальными идеями и желаниями каждого заказчика.
+         Отсутствие «шаблонных» решений, креативный подход и сотни счастливых клиентов — то, чем мы гордимся.
+      </p>
+    </div>
+    <div class="company__video" >
+      <video poster="img/poster.webp" preload="off" controls class="company__video__video" controlsList="nodownload" controlsList="nodownload" controlsList="nospeed" >
+        <source src="img/video/light.webm" type="video/webm" class="company__video__source" >
+    </video>
     </div>
   </div>
-</div>
 </section>
 
-      <section class="contact">
+      <section class="gallery" id="gallery">
   <div class="container">
-    <div class="woman">
-    <img src="img/contact_woman.png" alt="" class="col1 woman-img">
-    <h3 class="col2">Contact us</h3>
-    <div class="contact-city">
-      <button class="col3 button-unactive">City<img src="img/acc.png" class="button-img-unactive"></button>
-      <ul class="city-ul-none list-reset col4">
-        <li class="city-list canandaigua">Canandaigua, NY</li>
-        <li class="city-list new-york">New York City</li>
-        <li class="city-list yonkers">Yonkers, NY</li>
-        <li class="city-list sherrill">Sherrill, NY</li>
-      </ul>
-      <div class="contact-adress-canandaigua contact-adress hidden">
-        <div class="contact-adress-block">
-       <div class="contact-adress-title"> <h2>City:</h2> <h2>Phone:</h2> <h2>Office adress:</h2> </div>
-       <div class="contact-adress-descr"> <a>Canandaigua, NY</a> <a>+1 585 393 0001</a><a>151 Charlotte Street</a> </div>
+    <h1 class="gallery__title">Фото галерея</h1>
+
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/2.webp">
+                <img  loading="lazy" srcset="img/2.webp" type="image/webp" class="image" width="800" height="800" alt="1">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/6.webp">
+                <img loading="lazy" srcset="img/6.webp" type="image/webp" class="image" width="800" height="800" alt="2">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/9.webp">
+                <img loading="lazy" srcset="img/9.webp" type="image/webp" class="image" width="800" height="800" alt="3">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/1.webp">
+                <img  loading="lazy" srcset="img/1.webp" type="image/webp" class="image" width="800" height="800" alt="4">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/10.webp">
+                <img  loading="lazy" srcset="img/10.webp" type="image/webp" class="image" width="800" height="800" alt="5">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/3.webp">
+                <img loading="lazy" srcset="img/3.webp" type="image/webp" class="image" width="800" height="800" alt="6">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/5.webp">
+                <img loading="lazy" srcset="img/5.webp" type="image/webp" class="image" width="800" height="800" alt="7">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/7.webp">
+                <img  loading="lazy" srcset="img/7.webp" type="image/webp" class="image" width="800" height="800" alt="8">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/8.webp">
+                <img  loading="lazy" srcset="img/8.webp" type="image/webp"class="image" width="800" height="800" alt="9">
+              </a >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__item">
+              <a data-fslightbox="gallery" href="img/4.webp">
+                <img  loading="lazy" srcset="img/4.webp" type="image/webp" class="image" width="800" height="800" alt="10">
+              </a >
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="tel:+1	585	393 0001"><button class="contact-adress-btn btn-reset">Call us</button></a>
+      <div class="gallery__nav">
+          <div class="swiper-pagination"></div>
       </div>
 
-      <div class="contact-adress-yonkers contact-adress hidden">
-        <div class="contact-adress-block">
-          <div class="contact-adress-title"> <h2>City:</h2> <h2>Phone:</h2> <h2>Office adress:</h2> </div>
-          <div class="contact-adress-descr"> <a>Yonkers, NY</a> <a>+1 914 678 0003</a><a>511 Warburton Ave</a> </div>
-         </div>
-         <a href="tel:+19146780003"><button class="contact-adress-btn btn-reset">Call us</button></a>
+  </div>
+</section>
+
+      <section class="complects" id="complects">
+  <div class="container complects-container" data-aos="fade-up" data-aos-duration="1500">
+    <div class="complects_list">
+      <div class="complects_list-item list-item_1">
+        <h3 class="complects_list-title">Звуковое оформление</h3>
+        <img loading="lazy" src="img/svg/plus.svg" class="image_list image_list-1" width="16" height="16" alt="open">
       </div>
-      <div class="contact-adress-new-york contact-adress hidden">
-        <div class="contact-adress-block">
-          <div class="contact-adress-title"> <h2>City:</h2> <h2>Phone:</h2> <h2>Office adress:</h2> </div>
-          <div class="contact-adress-descr"> <a>New York City</a> <a>+1 212 456 0002</a><a>9 East 91st Street</a> </div>
-         </div>
-         <a href="tel:+12124560002"> <button class="contact-adress-btn btn-reset">Call us</button></a>
+      <div class="complects_info complects_info-close complects_info-1">
+        <ul class="complects_info-list">
+          <li class="complects_info-item">Оборудование класса А</li>
+          <li class="complects_info-item">Работа с Артистами</li>
+          <li class="complects_info-item">От маленькой свадебной церемонии до большого концерта</li>
+        </ul>
       </div>
-      <div class="contact-adress-sherrill contact-adress hidden">
-        <div class="contact-adress-block">
-          <div class="contact-adress-title"> <h2>City:</h2> <h2>Phone:</h2> <h2>Office adress:</h2> </div>
-          <div class="contact-adress-descr"> <a>Sherrill, NY</a> <a>+1 315 908 0004</a><a>14 WEST Noyes BLVD</a> </div>
-         </div>
-         <a href="tel:+13159080004"> <button class="contact-adress-btn btn-reset">Call us</button></a>
+      <hr class="complects_list-line">
+      <div class="complects_list-item list-item_2">
+        <h3 class="complects_list-title">Световое оформление</h3>
+        <img loading="lazy" src="img/svg/plus.svg" class="image_list image_list-2" width="16" height="16" alt="open">
+      </div>
+      <div class="complects_info complects_info-close complects_info-2">
+        <ul class="complects_info-list">
+          <li class="complects_info-item">Консультация менеджера для создания идеальной картинки</li>
+          <li class="complects_info-item">Гибкая ценовая политика</li>
+          <li class="complects_info-item">Наличие первоклассного и разнопланового парка световых приборов</li>
+          <li class="complects_info-item">Большой объем алюминиевого конструктива</li>
+        </ul>
+      </div>
+      <hr class="complects_list-line">
+      <div class="complects_list-item list-item_3">
+        <h3 class="complects_list-title">Спецэффекты</h3>
+        <img loading="lazy" src="img/svg/plus.svg" class="image_list image_list-" width="16" height="16" alt="open">
+      </div>
+      <div class="complects_info complects_info-close complects_info-3">
+        <ul class="complects_info-list">
+          <li class="complects_info-item">Тяжелый Дым</li>
+          <li class="complects_info-item">Пушка конфетти</li>
+          <li class="complects_info-item">Генератор конфетти</li>
+          <li class="complects_info-item">Снег — машина</li>
+        </ul>
+      </div>
+      <hr class="complects_list-line">
+      <div class="complects_list-item list-item_4">
+        <h3 class="complects_list-title">Светодиодные экраны</h3>
+        <img loading="lazy" src="img/svg/plus.svg" class="image_list image_list-4" width="16" height="16" alt="open">
+      </div>
+      <div class="complects_info complects_info-close complects_info-4">
+        <ul class="complects_info-list">
+          <li class="complects_info-item">Широкий спектр типоразмеров</li>
+          <li class="complects_info-item">Сложные конструкции и формы</li>
+          <li class="complects_info-item">Подготовка контента</li>
+        </ul>
+      </div>
+    </div>
+    <div class="complects-container">
+    <h1 class="complects__title">Готовые комплекты</h1>
+    <div class="complects_button">
+      <div class="button_item button_1">
+        <h2 class="button_title">Килловат-акробат</h2>
+        <p class="button_descr">Какая-то ифа о комплекте, или наверное нет</p>
+        <img loading="lazy" src="img/svg/complects.svg" class="button_svg button_svg_1" width="25" height="25"
+          alt="button">
       </div>
 
+      <div class="button_item button_2">
+        <h2 class="button_title">Килловат-акробат</h2>
+        <p class="button_descr">Какая-то ифа о комплекте, или наверное нет</p>
+        <img loading="lazy" src="img/svg/complects.svg" class="button_svg button_svg_2" width="25" height="25"
+          alt="button">
+      </div>
+      <div class="button_item button_3">
+        <h2 class="button_title">Килловат-акробат</h2>
+        <p class="button_descr">Какая-то ифа о комплекте, или наверное нет</p>
+        <img loading="lazy" src="img/svg/complects.svg" class="button_svg button_svg_3" width="25" height="25"
+          alt="button">
+      </div>
+    </div>
+    <div class="complect_info complect_info_1 ">
+      <h3 class="complect_info_title">В комплект входит:</h3>
+      <div class="complect_info_block">
+        <ul class="complect_info_ul">
+          <li class="complect_info_item">Ноги</li>
+          <li class="complect_info_item">Ноги</li>
+          <li class="complect_info_item">Ноги</li>
+          <li class="complect_info_item">Ноги</li>
+          <li class="complect_info_item">Ноги</li>
+        </ul>
+        <img loading="lazy" src="img/42.webp" class="complect_info_img">
+      </div>
+      <h3 class="complect_info_price">От <span>25000</span> руб.</h3>
+      <div class="button_center"><button class="complect_info_button">Заказать</button></div>
+    </div>
+    <div class="complect_info complect_info_2 ">
+      <h3 class="complect_info_title">В комплект входит:</h3>
+      <div class="complect_info_block">
+        <ul class="complect_info_ul">
+          <li class="complect_info_item">Руки</li>
+          <li class="complect_info_item">Руки</li>
+          <li class="complect_info_item">Руки</li>
+          <li class="complect_info_item">Руки</li>
+          <li class="complect_info_item">Руки</li>
+        </ul>
+        <img loading="lazy" src="img/42.webp" class="complect_info_img">
+      </div>
+      <h3 class="complect_info_price">От <span>25000</span> руб.</h3>
+      <div class="button_center"><button class="complect_info_button">Заказать</button></div>
+    </div>
+    <div class="complect_info complect_info_3 ">
+      <h3 class="complect_info_title">В комплект входит:</h3>
+      <div class="complect_info_block">
+        <ul class="complect_info_ul">
+          <li class="complect_info_item">Голова)</li>
+          <li class="complect_info_item">Голова)</li>
+          <li class="complect_info_item">Голова)</li>
+          <li class="complect_info_item">Голова)</li>
+          <li class="complect_info_item">Голова)</li>
+        </ul>
+        <img loading="lazy" src="img/42.webp" class="complect_info_img">
+      </div>
+      <h3 class="complect_info_price">От <span>25000</span> руб.</h3>
+      <div class="button_center"><button class="complect_info_button">Заказать</button></div>
+    </div>
+    </div>
+    <hr class="complect_underline">
+  </div>
+
+</section>
+
+      <section class="comments" id="comments">
+  <div class="container">
+    <h1 class="comments_title">Отзывы</h1>
+    <div class="comment_swiper">
+      <div class="swiper-wrapper">
+        <div class="comments_block swiper-slide">
+          <img loading="lazy" src="img/svg/profile.svg" class="comments_img" width="258" height="258">
+          <div class="comments_block_comment">
+            <h3 class="comment_name">Виктор Корнеплод</h3>
+            <hr class="comment_line">
+            <p class="comment_descr">Для современного мира дальнейшее развитие различных форм деятельности является
+              качественно новой ступенью позиций,
+              занимаемых участниками в отношении поставленных задач. Кстати, многие известные личности функционально
+              разнесены на независимые элементы.
+            </p>
+          </div>
+        </div>
+        <div class="comments_block swiper-slide">
+          <img loading="lazy" src="img/svg/profile.svg" class="comments_img" width="258" height="258">
+          <div class="comments_block_comment">
+            <h3 class="comment_name">Виктор Корнеплод</h3>
+            <hr class="comment_line">
+            <p class="comment_descr">Для современного мира дальнейшее развитие различных форм деятельности является
+              качественно новой ступенью позиций,
+              занимаемых участниками в отношении поставленных задач. Кстати, многие известные личности функционально
+              разнесены на независимые элементы.
+            </p>
+          </div>
+        </div>
+        <div class="comments_block swiper-slide">
+          <img loading="lazy" src="img/svg/profile.svg" class="comments_img" width="258" height="258">
+          <div class="comments_block_comment">
+            <h3 class="comment_name">Виктор Корнеплод</h3>
+            <hr class="comment_line">
+            <p class="comment_descr">Для современного мира дальнейшее развитие различных форм деятельности является
+              качественно новой ступенью позиций,
+              занимаемых участниками в отношении поставленных задач. Кстати, многие известные личности функционально
+              разнесены на независимые элементы.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment_controls">
+        <img loading="lazy" src="img/svg/last.svg" class="controls_last swiper-button-prev" width="50" height="50"
+          alt="last">
+        <img loading="lazy" src="img/svg/next.svg" class="controls_next swiper-button-next" width="50" height="50"
+          alt="next">
+      </div>
     </div>
   </div>
+</section>
+
+      <section class="order">
+  <div class="container">
+    <h1 class="complects__title order_title">Заказать консультацию</h1>
+    <form action="telegram.php" method="post" class="form">
+      <div class="order_form">
+        <div class="order_form-block">
+          <h3 class="order_form-title">Ф.И.О </h3>
+          <input type="text" name="name" class="order_form-input" placeholder="Введите ваше Ф.И.О">
+        </div>
+        <div class="order_form-block">
+          <h3 class="order_form-title">Телефон</h3>
+          <input type="tel" name="phone" class="order_form-input" placeholder="Введите ваш номер телефона">
+        </div>
+        <div class="order_form-block">
+          <h3 class="order_form-title">E-Mail</h3>
+          <input type="email" name="email" class="order_form-input" placeholder="Введите вашу электронную почту">
+        </div>
+
+      </div>
+      <button class="order_form-button" type="submit">Отправить заявку</button>
+    </form>
+  </div>
+</section>
+
+      <section class="contacts" id="contacts">
+  <div class="container">
+    <h1 class="comments_title">Как нас найти</h1>
+    <div class="contacts_block">
+      <div class="contacts_map" id="map">
+
+      </div>
+      <div class="contacts_info">
+        <h3 class="contacts_info-title">Где мы находимся:</h3>
+        <a target="_blank" href="https://yandex.ru/maps/39/rostov-na-donu/house/levoberezhnaya_ulitsa_4a/Z0AYcQNjTEEEQFptfX5wcHhiYg==/?ll=39.744592%2C47.210872&z=17.01"
+          class="contacts_info-descr">Ростов-на-Дону, Левобережный 4А</a>
+        <h3 class="contacts_info-title">Наши контакты:</h3>
+        <a href="tel:+79094146518" class="contacts_info-descr">+7 909 414-65-18</a>
+        <h3 class="contacts_info-title">или</h3>
+        <div class="contacts_info-svg">
+          <a target="_blank" href="https://vk.com/public212129551" class="contacts_svg"><img loading="lazy" src="img/svg/vk.svg"  width="60" height="60" alt="vk"></a>
+          <a target="_blank" href="" class="contacts_svg"><img loading="lazy" src="img/svg/whats.svg"  width="60" height="60" alt="whats"></a>
+          <a target="_blank" href="https://t.me/svet_rost" class="contacts_svg"><img loading="lazy" src="img/svg/tg.svg" width="60" height="60" alt="tg"></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
     </main>
     <footer class="footer">
   <div class="container">
-    <div class="footer-flex">
-      <a href="#" class="footer-git">© 2022 github</a>
-      <a href="#" class="footer-school">Rolling Scopes School</a>
-      <ul class="footer-flex-massanger list-reset">
-        <li>
-          <img src="img/svg/pint.svg" alt="">
-        </li>
-        <li>
-          <img src="img/svg/inst.svg" alt="">
-        </li>
-        <li>
-          <img src="img/svg/tw.svg" alt="">
-        </li>
-        <li>
-          <img src="img/svg/fb.svg" alt="">
-        </li>
-      </ul>
-    </div>
+    <hr class="footer_underline">
+    <h3 class="footer_title">2015 © Svet</h3>
   </div>
 </footer>
 
   </div>
+  <script id="ymap_lazy" src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"> </script>
 </body>
 
 </html>
